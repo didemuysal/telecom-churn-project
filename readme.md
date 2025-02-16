@@ -23,3 +23,19 @@ This project implements a churn prediction model using logistic regression, deve
 - Python 3.8 or higher
 - Docker
 - AWS Account for Elastic Beanstalk deployment
+
+## Results & Interpretation
+Example Output:
+{
+    "churn_probability": 0.6325673179466188,
+    "churn": true
+}
+
+Churn Probability: 0.63 (63%)
+The model predicts a 63% chance that the customer will churn (leave the service).
+Churn: True
+Since the probability exceeds 50%, the model flags the customer as likely to churn.
+
+Some of the output. 
+Customers with short tenure (1 month), low spending (~$30/month), and month-to-month contracts are more likely to churn.
+Customers with annual contracts, additional services (tech support, streaming, etc.), or lower churn probability (<50%) are less likely to leave.
